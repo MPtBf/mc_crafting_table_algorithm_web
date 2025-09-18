@@ -1,0 +1,46 @@
+
+html{
+    height: 100%;
+}
+body{
+    background-color: #c5c5c5;
+    color: #4c4c4c;
+    font-family: sans-serif;
+    margin: 0;
+    top: 0;
+}
+
+.slot{
+    width: 100px;
+    height: 100px;
+    background-color: #8a8a8a;
+    border: solid 5px;
+    border-color: #3f3f3f #f1f1f1 #f1f1f1 #3f3f3f;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+#title{
+    width: 100%;
+    text-align: center;
+    margin: 80px 0;
+}
+#craftingTable{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#craftingGrid{
+    margin: 0 50px;
+}
+#result{
+    margin: 0 50px;
+}
+
+#arrow{
+    font-size: 50px;
+}
+
