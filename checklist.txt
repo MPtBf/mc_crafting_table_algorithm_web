@@ -2,8 +2,8 @@
 
 [_] Place images of items in craftingSlots instead of text
 
-[_] Add craft result checking
+[_] Remake items pattern checking system ("can be mirrored horizontally, like axe?", "can be placed in any order, like fermented spider eye?")
 
-[_] Add ability to select item
+[_] Add ability to select certain item from inventory
 
 
