@@ -10,34 +10,6 @@ body{
     top: 0;
 }
 
-.slot{
-    width: 100px;
-    height: 100px;
-    background-color: #8a8a8a;
-    border: solid 5px;
-    border-color: #3f3f3f #f1f1f1 #f1f1f1 #3f3f3f;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column; /* Расположить элементы сверху вниз */
-    align-items: center; /* Центровка по горизонтали */
-}
-.itemImg{
-    height: 100%;
-    user-select: none;
-    /*:hover{*/
-    /*    */
-    /*}*/
-}
-.notFoundItemTextureText{
-    position: absolute;
-    color: white; /* Цвет текста */
-    background-color: rgba(0, 0, 0, 0.5); /* Фон с полупрозрачностью */
-    font-size: 12px;
-    user-select: none;
-}
-
 .row{
     display: flex;
     flex-direction: row;
@@ -67,3 +39,33 @@ body{
     user-select: none;
 }
 
+
+.slot{
+    width: 100px;
+    height: 100px;
+    background-color: #8a8a8a;
+    border: solid 5px;
+    border-color: #3f3f3f #f1f1f1 #f1f1f1 #3f3f3f;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Расположить элементы сверху вниз */
+    align-items: center; /* Центровка по горизонтали */
+}
+.slot:hover{
+    filter: brightness(1.4) saturate(0.7) contrast(0.8);
+}
+
+.itemImg{
+    height: 100%;
+    user-select: none;
+}
+
+.notFoundItemTextureText{
+    position: absolute;
+    color: white; /* Цвет текста */
+    background-color: rgba(0, 0, 0, 0.5); /* Фон с полупрозрачностью */
+    font-size: 12px;
+    user-select: none;
+}

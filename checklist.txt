@@ -1,9 +1,11 @@
 
 
-[_] Add white shade to slots & images when hovered
 
-[_] Remake items pattern checking system ("can be mirrored horizontally, like axe?", "can be placed in any order, like fermented spider eye?", "is 2x3 craft, like door, can be placed in different corners of 3x3 grid?")
+[_] Replace craft arrow to image instead of text
 
 [_] Add ability to select certain item from inventory (hotbar)
 
+[_] Remake items pattern checking system ("can be mirrored horizontally, like axe?", "can be placed in any order, like fermented spider eye?", "is 2x3 craft, like door, can be placed in different corners of 3x3 grid?")
+
+[_] Add more items and textures for them
 

@@ -61,8 +61,6 @@ class Slot{
         else {
             this.slotDiv.innerHTML = '';
         }
-        // // update item in slot
-        // this.slotDiv.innerHTML = '';
     }
 }
 class CraftingSlot extends Slot{
