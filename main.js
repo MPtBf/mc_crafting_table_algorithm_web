@@ -3,12 +3,24 @@ const craftingSlotsDivs = document.querySelectorAll("#craftingGrid .slot");
 const resultSlotDiv = document.querySelector("#result .slot");
 
 
-
 const items = {
     oak_log: 'oak_log',
     oak_planks: 'oak_planks',
     stick: 'stick',
-    craftingTable: 'craftingTable',
+    crafting_table: 'crafting_table',
+}
+
+function isImageExists(imageUrl){
+    try {
+        let http = new XMLHttpRequest();
+        http.open('HEAD', imageUrl, false);
+        http.send();
+        return http.status !== 404;
+    }
+    catch(e){
+        return false;
+    }
+
 }
 
 // slots classes
@@ -30,8 +42,27 @@ class Slot{
         this.update()
     }
     update(){
-        // update item in slot
-        this.slotDiv.innerHTML = this.item;
+        if (this.item) {
+            const itemImg = document.createElement("img");
+            itemImg.classList.add("itemImg");
+
+            const pathToImg = `./textures/${this.item}.png`
+
+            if (isImageExists(pathToImg))   itemImg.src = pathToImg
+            else {
+                itemImg.src = `./textures/not_found.png`
+                const itemNameDiv = document.createElement("p");
+                itemNameDiv.classList.add('notFoundItemTextureText');
+                itemNameDiv.innerText = `*${this.item}*`
+                this.slotDiv.appendChild(itemNameDiv)
+            }
+            this.slotDiv.appendChild(itemImg)
+        }
+        else {
+            this.slotDiv.innerHTML = '';
+        }
+        // // update item in slot
+        // this.slotDiv.innerHTML = '';
     }
 }
 class CraftingSlot extends Slot{
@@ -45,11 +76,6 @@ class CraftingSlot extends Slot{
         else {
             this.setItem(null);
         }
-    }
-    update(){
-        // update visual
-        this.slotDiv.innerHTML = this.item
-
         // update craft result
         updateResult()
     }
@@ -88,7 +114,7 @@ const updateResult = () => {
         && craftingSlots[5].item === null
         && craftingSlots[6].item === null
         && craftingSlots[7].item === null
-        && craftingSlots[8].item === null)   resultSlot.setItem(items.craftingTable)
+        && craftingSlots[8].item === null)   resultSlot.setItem(items.crafting_table)
 
     else if (craftingSlots[0].item === items.oak_planks
         && craftingSlots[1].item === null
@@ -104,7 +130,7 @@ const updateResult = () => {
 }
 
 
-let selectedItem = items.oak_planks
+let selectedItem = items.oak_planks;
 
 
 
