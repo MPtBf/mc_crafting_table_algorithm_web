@@ -46,11 +46,11 @@ class Slot{
             const itemImg = document.createElement("img");
             itemImg.classList.add("itemImg");
 
-            const pathToImg = `./textures/${this.item}.png`
+            const pathToImg = `./textures/items/${this.item}.png`
 
             if (isImageExists(pathToImg))   itemImg.src = pathToImg
             else {
-                itemImg.src = `./textures/not_found.png`
+                itemImg.src = `./textures/items/not_found.png`
                 const itemNameDiv = document.createElement("p");
                 itemNameDiv.classList.add('notFoundItemTextureText');
                 itemNameDiv.innerText = `*${this.item}*`

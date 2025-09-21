@@ -26,17 +26,14 @@ body{
     justify-content: center;
 }
 
-#craftingGrid{
-    margin: 0 50px;
-}
-#result{
-    margin: 0 50px;
-}
-
-#arrow{
-    font-size: 50px;
+#craftingGrid{}
+#result{}
+#arrow img{
+    height: 100px;
+    image-rendering: pixelated;
     cursor: default;
     user-select: none;
+    margin: 0 40px;
 }
 
 
@@ -54,7 +51,7 @@ body{
     align-items: center; /* Центровка по горизонтали */
 }
 .slot:hover{
-    filter: brightness(1.4) saturate(0.7) contrast(0.8);
+    filter: brightness(1.4) saturate(0.8) contrast(0.8);
 }
 
 .itemImg{

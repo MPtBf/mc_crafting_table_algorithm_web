@@ -1,9 +1,13 @@
 
 
 
-[_] Replace craft arrow to image instead of text
+[_] Make result slot be bigger than grid slots (like in actual minecraft)
 
 [_] Add ability to select certain item from inventory (hotbar)
+
+[_] Make cursor item holding system
+
+[_] Add support for stacked items
 
 [_] Remake items pattern checking system ("can be mirrored horizontally, like axe?", "can be placed in any order, like fermented spider eye?", "is 2x3 craft, like door, can be placed in different corners of 3x3 grid?")
 
