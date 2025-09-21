@@ -27,13 +27,17 @@ body{
 }
 
 #craftingGrid{}
-#result{}
 #arrow img{
     height: 100px;
     image-rendering: pixelated;
     cursor: default;
     user-select: none;
     margin: 0 40px;
+}
+#result{}
+#result .slot{
+    width: 150px;
+    height: 150px;
 }
 
 

@@ -1,8 +1,6 @@
 
 
 
-[_] Make result slot be bigger than grid slots (like in actual minecraft)
-
 [_] Add ability to select certain item from inventory (hotbar)
 
 [_] Make cursor item holding system
