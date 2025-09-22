@@ -5,5 +5,7 @@ Select bottom "creative inventory" slots, place items in slots of a crafting gri
 Creative inventory is a list of slots with infinite resource in them, these slots cannot be replaced or removed
 
 # Controls:
-Right click to the crafting grid slots to place items in them
+
+Left click - place item from cursor to slot
+Right click - place item from cursor to slot and keep same item in corsor
 
