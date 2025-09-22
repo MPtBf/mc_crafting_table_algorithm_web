@@ -1,6 +1,8 @@
 
 const craftingSlotsDivs = document.querySelectorAll("#craftingGrid .slot");
 const resultSlotDiv = document.querySelector("#result .slot");
+const inventorySlotsContainer = document.querySelector("#inventory .row");
+
 
 
 const items = {
@@ -89,14 +91,34 @@ class ResultSlot extends Slot{
         }
     }
 }
+class CreativeSlot extends Slot{
+    constructor(slotDiv) {
+        super(slotDiv);
+    }
+    onClick(){
+        selectedItem = this.item
+    }
+}
 
-// initializing craftingSlots
+// initializing
+// craftingSlots
 let craftingSlots = []
 for (let slot of craftingSlotsDivs) {
     const newSlot = new CraftingSlot(slot)
     craftingSlots.push(newSlot)
 }
 const resultSlot = new ResultSlot(resultSlotDiv)
+// inventory slots
+let inventorySlots = []
+for (let itemName of Object.values(items)) {
+    const slotDiv = document.createElement("div");
+    slotDiv.classList.add("slot");
+    inventorySlotsContainer.appendChild(slotDiv)
+
+    const newSlot = new CreativeSlot(slotDiv)
+    newSlot.setItem(itemName)
+    inventorySlots.push(newSlot)
+}
 
 const clearCraft = () => {
     for (let slot of [...craftingSlots, resultSlot]) {
