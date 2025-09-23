@@ -1,7 +1,7 @@
 
 
 
-[_] Make cursor item holding system
+[_] Add "remove" button
 
 [_] Add support for stacked items
 

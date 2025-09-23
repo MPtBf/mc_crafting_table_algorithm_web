@@ -87,3 +87,15 @@ h1{
     font-size: 12px;
     user-select: none;
 }
+
+
+#heldItem{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центровка по горизонтали */
+}
