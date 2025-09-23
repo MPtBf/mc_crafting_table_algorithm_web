@@ -1,6 +1,7 @@
 
 const craftingSlotsDOMs = document.querySelectorAll("#craftingGrid .slot");
 const resultSlotDOM = document.querySelector("#result .slot");
+const removeSlotDOM = document.querySelector("#remove .slot");
 const inventorySlotsContainerDOM = document.querySelector("#inventory .row");
 const heldItemDOM = document.querySelector("#heldItem");
 
@@ -79,7 +80,6 @@ const setHeldItem = (item) => {
             itemNameDiv.classList.add('notFoundItemTextureText');
             itemNameDiv.innerText = `*${item}*`
             heldItemDOM.appendChild(itemNameDiv)
-            console.log('appnded error text')
         }
 
         heldItemDOM.appendChild(itemImg)
@@ -161,6 +161,15 @@ class ResultSlot extends Slot{
         }
     }
 }
+class RemoveSlot extends Slot{
+    constructor(slotDiv) {
+        super(slotDiv);
+    }
+    onClick(e){
+        if (e.shiftKey)   clearCraft()
+        else   setHeldItem(null)
+    }
+}
 class CreativeSlot extends Slot{
     constructor(slotDiv) {
         super(slotDiv);
@@ -171,14 +180,14 @@ class CreativeSlot extends Slot{
     }
 }
 
-// initializing craftingSlots
+// initializing slots
 let craftingSlots = []
 for (let slot of craftingSlotsDOMs) {
     const newSlot = new CraftingSlot(slot)
     craftingSlots.push(newSlot)
 }
 const resultSlot = new ResultSlot(resultSlotDOM)
-// initializing inventory slots
+const removeSlot = new RemoveSlot(removeSlotDOM)
 let inventorySlots = []
 for (let itemName of Object.values(items)) {
     const slotDiv = document.createElement("div");

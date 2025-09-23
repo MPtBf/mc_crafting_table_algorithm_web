@@ -99,3 +99,16 @@ h1{
     justify-content: center;
     align-items: center; /* Центровка по горизонтали */
 }
+
+#remove{
+    margin-right: 100px;
+    .slot{
+        background-color: #aa7e7e;
+    }
+    img{
+        height: 100%;
+        image-rendering: pixelated;
+        cursor: default;
+        user-select: none;
+    }
+}
