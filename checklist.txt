@@ -1,8 +1,6 @@
 
 
 
-[_] Fix crafts that use different planks types
-
 [_] Add textures for basic items: stick, planks, crafting table, diamond, iron ingot...
 
 [_] Fix item names not moving with their slot when scrolling hotbar
