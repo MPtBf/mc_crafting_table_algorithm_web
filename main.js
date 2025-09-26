@@ -5,14 +5,9 @@ const removeSlotDOM = document.querySelector("#remove .slot");
 const inventorySlotsContainerDOM = document.querySelector("#inventory .row");
 const heldItemDOM = document.querySelector("#heldItem");
 
+import {getCraftingResult} from './crafts.js'
+import {items, craftingRecipes} from "./minecraftData.js";
 
-
-const items = {
-    oak_log: 'oak_log',
-    oak_planks: 'oak_planks',
-    stick: 'stick',
-    crafting_table: 'crafting_table',
-}
 
 function isImageExists(imageUrl){
     try {
@@ -42,27 +37,16 @@ const clearCraft = () =>    {
     }
 }
 const updateResult = () => {
-    if (craftingSlots[0].item === items.oak_planks
-        && craftingSlots[1].item === items.oak_planks
-        && craftingSlots[2].item === null
-        && craftingSlots[3].item === items.oak_planks
-        && craftingSlots[4].item === items.oak_planks
-        && craftingSlots[5].item === null
-        && craftingSlots[6].item === null
-        && craftingSlots[7].item === null
-        && craftingSlots[8].item === null)   resultSlot.setItem(items.crafting_table)
+    let g = craftingSlots
+    const craftingGrid = [
+        [g[0].item, g[1].item, g[2].item],
+        [g[3].item, g[4].item, g[5].item],
+        [g[6].item, g[7].item, g[8].item],
+    ]
 
-    else if (craftingSlots[0].item === items.oak_planks
-        && craftingSlots[1].item === null
-        && craftingSlots[2].item === null
-        && craftingSlots[3].item === items.oak_planks
-        && craftingSlots[4].item === null
-        && craftingSlots[5].item === null
-        && craftingSlots[6].item === null
-        && craftingSlots[7].item === null
-        && craftingSlots[8].item === null)   resultSlot.setItem(items.stick)
+    const resItem = getCraftingResult(craftingGrid)
 
-    else   resultSlot.setItem(null)
+    resultSlot.setItem(resItem)
 }
 const setHeldItem = (item) => {
     heldItem = item
@@ -78,12 +62,31 @@ const setHeldItem = (item) => {
             itemImg.src = itemsTexturesPath + `/not_found.png`
             const itemNameDiv = document.createElement("p");
             itemNameDiv.classList.add('notFoundItemTextureText');
-            itemNameDiv.innerText = `*${item}*`
+            itemNameDiv.innerText = `*${items[item]}*`
             heldItemDOM.appendChild(itemNameDiv)
         }
 
         heldItemDOM.appendChild(itemImg)
     }
+}
+const isUsedForCrafting = (itemName) => {
+    for (let r of craftingRecipes){
+        let usingItems = Object.values(r.key).map(k => {
+            if (k instanceof Array) {
+                return k.map(k2 => {
+                    if (k2.data === 0)  return k2.item
+                    else  return `${k2.item}@${k2.data}`
+                })
+            }
+            else {
+                if (! k.data)  return k.item
+                else  return `${k.item}@${k.data}`
+            }
+        })
+        usingItems = usingItems.flat()
+        if (usingItems.includes(itemName))  return true
+    }
+    return false
 }
 
 // slots classes
@@ -121,7 +124,7 @@ class Slot{
                 itemImg.src = itemsTexturesPath + `/not_found.png`
                 const itemNameDiv = document.createElement("p");
                 itemNameDiv.classList.add('notFoundItemTextureText');
-                itemNameDiv.innerText = `*${this.item}*`
+                itemNameDiv.innerText = `*${items[this.item]}*`
                 this.slotDiv.appendChild(itemNameDiv)
             }
             this.slotDiv.appendChild(itemImg)
@@ -188,15 +191,18 @@ for (let slot of craftingSlotsDOMs) {
 }
 const resultSlot = new ResultSlot(resultSlotDOM)
 const removeSlot = new RemoveSlot(removeSlotDOM)
-let inventorySlots = []
-for (let itemName of Object.values(items)) {
+let creativeSlots = []
+for (let itemName of Object.keys(items)) {
+    // don't add items which cant be used for crafting (to save inventory space)
+    if (! isUsedForCrafting(itemName))  continue
+
     const slotDiv = document.createElement("div");
     slotDiv.classList.add("slot");
     inventorySlotsContainerDOM.appendChild(slotDiv)
 
     const newSlot = new CreativeSlot(slotDiv)
     newSlot.setItem(itemName)
-    inventorySlots.push(newSlot)
+    creativeSlots.push(newSlot)
 }
 
 
