@@ -1,5 +1,5 @@
 
-import {items, craftingRecipes} from './minecraftData.js'
+import {craftingRecipes} from './minecraftData.js'
 
 
 
@@ -37,6 +37,15 @@ function normalizePattern(pattern) {
 
 // Функция для проверки совпадения паттернов
 function patternsMatch(craftingGrid, recipePattern, shapeless = false) {
+    // remove material types (like planks@1 or stone@2)
+    craftingGrid.forEach((row, rowInd) => {
+        row.forEach((item, itemInd) => {
+            if (! item)  return
+            item = item.split('@')[0]
+            craftingGrid[rowInd][itemInd] = item;
+        })
+    })
+
     if (shapeless) {
         // Для бесформенного крафта просто сравниваем наборы предметов
         const gridItems = craftingGrid.flat().filter(item => item !== null);
@@ -127,29 +136,46 @@ function patternsMatch(craftingGrid, recipePattern, shapeless = false) {
     return false;
 }
 
-function parsePattern(pattern, keys) {
+function parsePattern(recipe) {
     let parsedPattern = []
-    pattern.forEach((row, i) => {
-        parsedPattern.push([]);
-        for (let key of row){
-            let item = null
-            if (key !== ' ') {
-                item = keys[key].item
+    if (recipe.type === 'crafting_shaped') {
+        const pattern = recipe.pattern;
+        pattern.forEach((row, i) => {
+            parsedPattern.push([]);
+            for (let key of row) {
+                let item = null
+                let k = recipe.key
+                if (key !== ' ') {
+                    const rawItem = k[key]
+                    if (rawItem instanceof Array) {
+                        item = rawItem[0].item
+                    } else {
+                        item = rawItem.item
+                    }
+                }
+                parsedPattern[i].push(item);
             }
-            parsedPattern[i].push(item);
-        }
-    })
-    return parsedPattern;
+        })
+    }
+    else if (recipe.type === 'crafting_shapeless') {
+        const ingredients = recipe.ingredients;
+        ingredients.forEach((rawItem) => {
+            let item = rawItem.item
+            parsedPattern.push(item)
+        })
+    }
+    else{
+        throw new Error(`unknown recipe type: ${recipe.type}`);
+    }
+    return parsedPattern
 }
 
 // Основная функция определения результата крафта
-export function getCraftingResult(craftingGrid) {
+export function getCraftingResult(craftingGrid)     {
     // Проверяем все рецепты
     for (const recipe of craftingRecipes) {
-        if (patternsMatch(craftingGrid, parsePattern(recipe.pattern, recipe.key), recipe.type === 'crafting_shapeless')) {
-
-            // console.log(`result is ${recipe.result} for crafting grid:`)
-            // console.log(craftingGrid)
+        const doPatternsMatch = patternsMatch(craftingGrid, parsePattern(recipe), recipe.type === 'crafting_shapeless')
+        if (doPatternsMatch) {
             return recipe.result.item
         }
     }

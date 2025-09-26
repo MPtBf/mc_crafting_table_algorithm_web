@@ -71,20 +71,36 @@ const setHeldItem = (item) => {
 }
 const isUsedForCrafting = (itemName) => {
     for (let r of craftingRecipes){
-        let usingItems = Object.values(r.key).map(k => {
-            if (k instanceof Array) {
-                return k.map(k2 => {
-                    if (k2.data === 0)  return k2.item
-                    else  return `${k2.item}@${k2.data}`
-                })
-            }
-            else {
-                if (! k.data)  return k.item
-                else  return `${k.item}@${k.data}`
-            }
-        })
-        usingItems = usingItems.flat()
-        if (usingItems.includes(itemName))  return true
+        if (r.type === 'crafting_shaped') {
+            let usingItems = Object.values(r.key).map(k => {
+                if (k instanceof Array) {
+                    return k.map(k2 => {
+                        if (k2.data === 0) return k2.item
+                        else return `${k2.item}@${k2.data}`
+                    })
+                } else {
+                    if (!k.data) return k.item
+                    else return `${k.item}@${k.data}`
+                }
+            })
+            usingItems = usingItems.flat()
+            if (usingItems.includes(itemName)) return true
+        }
+        else if (r.type === 'crafting_shapeless') {
+            let usingItems = Object.values(r.ingredients).map(k => {
+                if (k instanceof Array) {
+                    return k.map(k2 => {
+                        if (k2.data === 0) return k2.item
+                        else return `${k2.item}@${k2.data}`
+                    })
+                } else {
+                    if (!k.data) return k.item
+                    else return `${k.item}@${k.data}`
+                }
+            })
+            usingItems = usingItems.flat()
+            if (usingItems.includes(itemName)) return true
+        }
     }
     return false
 }

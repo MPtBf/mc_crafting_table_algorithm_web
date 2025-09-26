@@ -4,32 +4,54 @@
 export const craftingRecipes = [
     {
         "type": "crafting_shaped",
+        "group": "wooden_stairs",
         "pattern": [
-            "GGG",
-            "GSG",
-            "OOO"
+            "#  ",
+            "## ",
+            "###"
         ],
         "key": {
-            "S": {
-                "item": "minecraft:nether_star"
-            },
-            "G": {
-                "item": "minecraft:glass"
-            },
-            "O": {
-                "item": "minecraft:obsidian"
+            "#": {
+                "item": "minecraft:planks",
+                "data": 5
             }
         },
         "result": {
-            "item": "minecraft:beacon"
+            "item": "minecraft:dark_oak_stairs",
+            "count": 4
+        }
+    },
+    {
+        "type": "crafting_shapeless",
+        "ingredients": [
+            {
+                "item": "minecraft:paper",
+                "data": 0
+            },
+            {
+                "item": "minecraft:paper",
+                "data": 0
+            },
+            {
+                "item": "minecraft:paper",
+                "data": 0
+            },
+            {
+                "item": "minecraft:leather",
+                "data": 0
+            }
+        ],
+        "result": {
+            "item": "minecraft:book",
+            "count": 1
         }
     },
     {
         "type": "crafting_shaped",
         "pattern": [
-            "XXX",
-            " # ",
-            " # "
+            "XX",
+            " #",
+            " #"
         ],
         "key": {
             "#": {
@@ -40,49 +62,26 @@ export const craftingRecipes = [
             }
         },
         "result": {
-            "item": "minecraft:diamond_pickaxe"
+            "item": "minecraft:diamond_hoe"
         }
     },
     {
         "type": "crafting_shaped",
         "pattern": [
-            "XX",
-            "X#",
-            " #"
+            "  #",
+            " #X",
+            "# X"
         ],
         "key": {
             "#": {
                 "item": "minecraft:stick"
             },
-            "X": [
-                {
-                    "item": "minecraft:planks",
-                    "data": 0
-                },
-                {
-                    "item": "minecraft:planks",
-                    "data": 1
-                },
-                {
-                    "item": "minecraft:planks",
-                    "data": 2
-                },
-                {
-                    "item": "minecraft:planks",
-                    "data": 3
-                },
-                {
-                    "item": "minecraft:planks",
-                    "data": 4
-                },
-                {
-                    "item": "minecraft:planks",
-                    "data": 5
-                }
-            ]
+            "X": {
+                "item": "minecraft:string"
+            }
         },
         "result": {
-            "item": "minecraft:wooden_axe"
+            "item": "minecraft:fishing_rod"
         }
     },
 ];
