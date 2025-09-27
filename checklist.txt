@@ -1,8 +1,6 @@
 
 
 
-[_] Fix item names not moving with their slot when scrolling hotbar
-
 [_] Fix some of the textures, like blocks and leather armor
 
 [_] Fix crafting with different materials of items (should be unable to make button out of granite, but able out of stone)
