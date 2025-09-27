@@ -1,89 +1,3888 @@
-
-
-
 export const craftingRecipes = [
     {
-        "type": "crafting_shaped",
-        "group": "wooden_stairs",
-        "pattern": [
-            "#  ",
-            "## ",
-            "###"
-        ],
-        "key": {
-            "#": {
-                "item": "minecraft:planks",
-                "data": 5
-            }
-        },
-        "result": {
-            "item": "minecraft:dark_oak_stairs",
-            "count": 4
-        }
+        type: 'crafting_shaped',
+        group: 'boat',
+        pattern: ['# #', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 4}},
+        result: {item: 'minecraft:acacia_boat'}
     },
     {
-        "type": "crafting_shapeless",
-        "ingredients": [
-            {
-                "item": "minecraft:paper",
-                "data": 0
-            },
-            {
-                "item": "minecraft:paper",
-                "data": 0
-            },
-            {
-                "item": "minecraft:paper",
-                "data": 0
-            },
-            {
-                "item": "minecraft:leather",
-                "data": 0
-            }
-        ],
-        "result": {
-            "item": "minecraft:book",
-            "count": 1
-        }
+        type: 'crafting_shaped',
+        group: 'wooden_door',
+        pattern: ['##', '##', '##'],
+        key: {'#': {item: 'minecraft:planks', data: 4}},
+        result: {item: 'minecraft:acacia_door', count: 3}
     },
     {
-        "type": "crafting_shaped",
-        "pattern": [
-            "XX",
-            " #",
-            " #"
-        ],
-        "key": {
-            "#": {
-                "item": "minecraft:stick"
-            },
-            "X": {
-                "item": "minecraft:diamond"
-            }
+        type: 'crafting_shaped',
+        group: 'wooden_fence',
+        pattern: ['W#W', 'W#W'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 4}
         },
-        "result": {
-            "item": "minecraft:diamond_hoe"
-        }
+        result: {item: 'minecraft:acacia_fence', count: 3}
     },
     {
-        "type": "crafting_shaped",
-        "pattern": [
-            "  #",
-            " #X",
-            "# X"
-        ],
-        "key": {
-            "#": {
-                "item": "minecraft:stick"
-            },
-            "X": {
-                "item": "minecraft:string"
-            }
+        type: 'crafting_shaped',
+        group: 'wooden_fence_gate',
+        pattern: ['#W#', '#W#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 4}
         },
-        "result": {
-            "item": "minecraft:fishing_rod"
-        }
+        result: {item: 'minecraft:acacia_fence_gate'}
     },
+    {
+        type: 'crafting_shaped',
+        group: 'planks',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:log2', data: 0}},
+        result: {item: 'minecraft:planks', data: 4, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_stairs',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 4}},
+        result: {item: 'minecraft:acacia_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_slab',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:planks', data: 4}},
+        result: {item: 'minecraft:wooden_slab', data: 4, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XSX', 'X#X', 'XSX'],
+        key: {
+            '#': {item: 'minecraft:redstone_torch'},
+            S: {item: 'minecraft:stick'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:activator_rail', count: 6}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:stone', data: 3},
+            {item: 'minecraft:cobblestone'}
+        ],
+        result: {item: 'minecraft:stone', data: 5, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['III', ' i ', 'iii'],
+        key: {
+            I: {item: 'minecraft:iron_block'},
+            i: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:anvil', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['///', ' / ', '/_/'],
+        key: {
+            '/': {item: 'minecraft:stick'},
+            _: {item: 'minecraft:stone_slab', data: 0}
+        },
+        result: {item: 'minecraft:armor_stand'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#', 'Y'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:flint'},
+            Y: {item: 'minecraft:feather'}
+        },
+        result: {item: 'minecraft:arrow', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['GGG', 'GSG', 'OOO'],
+        key: {
+            S: {item: 'minecraft:nether_star'},
+            G: {item: 'minecraft:glass'},
+            O: {item: 'minecraft:obsidian'}
+        },
+        result: {item: 'minecraft:beacon'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['OOO', 'OOO', ' B '],
+        key: {B: {item: 'minecraft:bowl'}, O: {item: 'minecraft:beetroot'}},
+        result: {item: 'minecraft:beetroot_soup'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'boat',
+        pattern: ['# #', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 2}},
+        result: {item: 'minecraft:birch_boat'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_door',
+        pattern: ['##', '##', '##'],
+        key: {'#': {item: 'minecraft:planks', data: 2}},
+        result: {item: 'minecraft:birch_door', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence',
+        pattern: ['W#W', 'W#W'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 2}
+        },
+        result: {item: 'minecraft:birch_fence', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence_gate',
+        pattern: ['#W#', '#W#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 2}
+        },
+        result: {item: 'minecraft:birch_fence_gate'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'planks',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:log', data: 2}},
+        result: {item: 'minecraft:planks', data: 2, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_stairs',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 2}},
+        result: {item: 'minecraft:birch_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_slab',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:planks', data: 2}},
+        result: {item: 'minecraft:wooden_slab', data: 2, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 15},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 15},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 15}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 0}
+        ],
+        result: {item: 'minecraft:bed', data: 15}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 15}},
+        result: {item: 'minecraft:carpet', data: 15, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 15, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 0}
+        },
+        result: {item: 'minecraft:stained_glass', data: 15, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 15}},
+        result: {item: 'minecraft:stained_glass_pane', data: 15, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 0}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 15, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 0},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 15}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [{item: 'minecraft:blaze_rod'}],
+        result: {item: 'minecraft:blaze_powder', count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 11},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 11},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 11}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 4}
+        ],
+        result: {item: 'minecraft:bed', data: 11}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 11}},
+        result: {item: 'minecraft:carpet', data: 11, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 4},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 11, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 4}
+        },
+        result: {item: 'minecraft:stained_glass', data: 11, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 11}},
+        result: {item: 'minecraft:stained_glass_pane', data: 11, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 4}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 11, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 4},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 11}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'boat',
+        pattern: ['# #', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 0}},
+        result: {item: 'minecraft:boat'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'XXX', 'XXX'],
+        key: {X: {item: 'minecraft:dye', data: 15}},
+        result: {item: 'minecraft:bone_block'}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'bonemeal',
+        ingredients: [{item: 'minecraft:bone_block'}],
+        result: {item: 'minecraft:dye', data: 15, count: 9}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'bonemeal',
+        ingredients: [{item: 'minecraft:bone'}],
+        result: {item: 'minecraft:dye', data: 15, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:paper', data: 0},
+            {item: 'minecraft:paper', data: 0},
+            {item: 'minecraft:paper', data: 0},
+            {item: 'minecraft:leather', data: 0}
+        ],
+        result: {item: 'minecraft:book', count: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', 'XXX', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ],
+            X: {item: 'minecraft:book'}
+        },
+        result: {item: 'minecraft:bookshelf'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' #X', '# X', ' #X'],
+        key: {'#': {item: 'minecraft:stick'}, X: {item: 'minecraft:string'}},
+        result: {item: 'minecraft:bow'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# #', ' # '],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bowl', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:wheat'}},
+        result: {item: 'minecraft:bread'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' B ', '###'],
+        key: {
+            B: {item: 'minecraft:blaze_rod'},
+            '#': {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:brewing_stand'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:brick'}},
+        result: {item: 'minecraft:brick_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:brick_block'}},
+        result: {item: 'minecraft:stone_slab', data: 4, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:brick_block'}},
+        result: {item: 'minecraft:brick_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 12},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 12},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 12}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 3}
+        ],
+        result: {item: 'minecraft:bed', data: 12}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 12}},
+        result: {item: 'minecraft:carpet', data: 12, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 3},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 12, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 3}
+        },
+        result: {item: 'minecraft:stained_glass', data: 12, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 12}},
+        result: {item: 'minecraft:stained_glass_pane', data: 12, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 3}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 12, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 3},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 12}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# #', ' # '],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:bucket'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['AAA', 'BEB', 'CCC'],
+        key: {
+            A: {item: 'minecraft:milk_bucket'},
+            B: {item: 'minecraft:sugar'},
+            C: {item: 'minecraft:wheat'},
+            E: {item: 'minecraft:egg'}
+        },
+        result: {item: 'minecraft:cake'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# ', ' X'],
+        key: {
+            '#': {item: 'minecraft:fishing_rod'},
+            X: {item: 'minecraft:carrot'}
+        },
+        result: {item: 'minecraft:carrot_on_a_stick'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# #', '# #', '###'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:cauldron'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '# #', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:chest'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['A', 'B'],
+        key: {A: {item: 'minecraft:chest'}, B: {item: 'minecraft:minecart'}},
+        result: {item: 'minecraft:chest_minecart'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#', '#'],
+        key: {'#': {item: 'minecraft:stone_slab', data: 7}},
+        result: {item: 'minecraft:quartz_block', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#', '#'],
+        key: {'#': {item: 'minecraft:stone_slab2', data: 0}},
+        result: {item: 'minecraft:red_sandstone', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#', '#'],
+        key: {'#': {item: 'minecraft:stone_slab', data: 1}},
+        result: {item: 'minecraft:sandstone', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#', '#'],
+        key: {'#': {item: 'minecraft:stone_slab', data: 5}},
+        result: {item: 'minecraft:stonebrick', data: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:clay_ball'}},
+        result: {item: 'minecraft:clay'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' # ', '#X#', ' # '],
+        key: {
+            '#': {item: 'minecraft:gold_ingot'},
+            X: {item: 'minecraft:redstone'}
+        },
+        result: {item: 'minecraft:clock'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:coal_block'}},
+        result: {item: 'minecraft:coal', data: 0, count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:coal', data: 0}},
+        result: {item: 'minecraft:coal_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['DG', 'GD'],
+        key: {
+            D: {item: 'minecraft:dirt', data: 0},
+            G: {item: 'minecraft:gravel'}
+        },
+        result: {item: 'minecraft:dirt', data: 1, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:cobblestone'}},
+        result: {item: 'minecraft:stone_slab', data: 3, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:cobblestone'}},
+        result: {item: 'minecraft:cobblestone_wall', data: 0, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' # ', '#X#', 'III'],
+        key: {
+            '#': {item: 'minecraft:redstone_torch'},
+            X: {item: 'minecraft:quartz'},
+            I: {item: 'minecraft:stone', data: 0}
+        },
+        result: {item: 'minecraft:comparator'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' # ', '#X#', ' # '],
+        key: {
+            '#': {item: 'minecraft:iron_ingot'},
+            X: {item: 'minecraft:redstone'}
+        },
+        result: {item: 'minecraft:compass'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#X#'],
+        key: {
+            '#': {item: 'minecraft:wheat'},
+            X: {item: 'minecraft:dye', data: 3}
+        },
+        result: {item: 'minecraft:cookie', count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:crafting_table'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 9},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 9},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 9}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 6}
+        ],
+        result: {item: 'minecraft:bed', data: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 9}},
+        result: {item: 'minecraft:carpet', data: 9, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 6},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 9, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:dye', data: 4},
+            {item: 'minecraft:dye', data: 2}
+        ],
+        result: {item: 'minecraft:dye', data: 6, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 6}
+        },
+        result: {item: 'minecraft:stained_glass', data: 9, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 9}},
+        result: {item: 'minecraft:stained_glass_pane', data: 9, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 6}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 9, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 6},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'boat',
+        pattern: ['# #', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 5}},
+        result: {item: 'minecraft:dark_oak_boat'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_door',
+        pattern: ['##', '##', '##'],
+        key: {'#': {item: 'minecraft:planks', data: 5}},
+        result: {item: 'minecraft:dark_oak_door', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence',
+        pattern: ['W#W', 'W#W'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 5}
+        },
+        result: {item: 'minecraft:dark_oak_fence', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence_gate',
+        pattern: ['#W#', '#W#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 5}
+        },
+        result: {item: 'minecraft:dark_oak_fence_gate'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'planks',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:log2', data: 1}},
+        result: {item: 'minecraft:planks', data: 5, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_stairs',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 5}},
+        result: {item: 'minecraft:dark_oak_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_slab',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:planks', data: 5}},
+        result: {item: 'minecraft:wooden_slab', data: 5, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['SSS', 'SIS', 'SSS'],
+        key: {
+            S: {item: 'minecraft:prismarine_shard'},
+            I: {item: 'minecraft:dye', data: 0}
+        },
+        result: {item: 'minecraft:prismarine', data: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['GGG', 'QQQ', 'WWW'],
+        key: {
+            Q: {item: 'minecraft:quartz'},
+            G: {item: 'minecraft:glass'},
+            W: [
+                {item: 'minecraft:wooden_slab', data: 0},
+                {item: 'minecraft:wooden_slab', data: 1},
+                {item: 'minecraft:wooden_slab', data: 2},
+                {item: 'minecraft:wooden_slab', data: 3},
+                {item: 'minecraft:wooden_slab', data: 4},
+                {item: 'minecraft:wooden_slab', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:daylight_detector'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'X#X', 'XRX'],
+        key: {
+            R: {item: 'minecraft:redstone'},
+            '#': {item: 'minecraft:stone_pressure_plate'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:detector_rail', count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:diamond_block'}},
+        result: {item: 'minecraft:diamond', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', 'X#', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:diamond'}
+        },
+        result: {item: 'minecraft:diamond_axe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:diamond'}},
+        result: {item: 'minecraft:diamond_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'X X'],
+        key: {X: {item: 'minecraft:diamond'}},
+        result: {item: 'minecraft:diamond_boots'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'XXX', 'XXX'],
+        key: {X: {item: 'minecraft:diamond'}},
+        result: {item: 'minecraft:diamond_chestplate'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X'],
+        key: {X: {item: 'minecraft:diamond'}},
+        result: {item: 'minecraft:diamond_helmet'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', ' #', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:diamond'}
+        },
+        result: {item: 'minecraft:diamond_hoe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X', 'X X'],
+        key: {X: {item: 'minecraft:diamond'}},
+        result: {item: 'minecraft:diamond_leggings'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', ' # ', ' # '],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:diamond'}
+        },
+        result: {item: 'minecraft:diamond_pickaxe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:diamond'}
+        },
+        result: {item: 'minecraft:diamond_shovel'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', 'X', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:diamond'}
+        },
+        result: {item: 'minecraft:diamond_sword'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['CQ', 'QC'],
+        key: {
+            Q: {item: 'minecraft:quartz'},
+            C: {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:stone', data: 3, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '#R#'],
+        key: {
+            R: {item: 'minecraft:redstone'},
+            '#': {item: 'minecraft:cobblestone'},
+            X: {item: 'minecraft:bow'}
+        },
+        result: {item: 'minecraft:dispenser'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '# #', '#R#'],
+        key: {
+            R: {item: 'minecraft:redstone'},
+            '#': {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:dropper'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:emerald_block'}},
+        result: {item: 'minecraft:emerald', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:emerald'}},
+        result: {item: 'minecraft:emerald_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' B ', 'D#D', '###'],
+        key: {
+            B: {item: 'minecraft:book'},
+            '#': {item: 'minecraft:obsidian'},
+            D: {item: 'minecraft:diamond'}
+        },
+        result: {item: 'minecraft:enchanting_table'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#E#', '###'],
+        key: {
+            '#': {item: 'minecraft:obsidian'},
+            E: {item: 'minecraft:ender_eye'}
+        },
+        result: {item: 'minecraft:ender_chest'}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:ender_pearl'},
+            {item: 'minecraft:blaze_powder'}
+        ],
+        result: {item: 'minecraft:ender_eye'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:end_stone'}},
+        result: {item: 'minecraft:end_bricks', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['GGG', 'GEG', 'GTG'],
+        key: {
+            T: {item: 'minecraft:ghast_tear'},
+            E: {item: 'minecraft:ender_eye'},
+            G: {item: 'minecraft:glass'}
+        },
+        result: {item: 'minecraft:end_crystal'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['/', '#'],
+        key: {
+            '#': {item: 'minecraft:chorus_fruit_popped'},
+            '/': {item: 'minecraft:blaze_rod'}
+        },
+        result: {item: 'minecraft:end_rod', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence',
+        pattern: ['W#W', 'W#W'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 0}
+        },
+        result: {item: 'minecraft:fence', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence_gate',
+        pattern: ['#W#', '#W#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 0}
+        },
+        result: {item: 'minecraft:fence_gate'}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:spider_eye'},
+            {item: 'minecraft:brown_mushroom'},
+            {item: 'minecraft:sugar'}
+        ],
+        result: {item: 'minecraft:fermented_spider_eye'}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:gunpowder'},
+            {item: 'minecraft:blaze_powder'},
+            [
+                {item: 'minecraft:coal', data: 0},
+                {item: 'minecraft:coal', data: 1}
+            ]
+        ],
+        result: {item: 'minecraft:fire_charge', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['  #', ' #X', '# X'],
+        key: {'#': {item: 'minecraft:stick'}, X: {item: 'minecraft:string'}},
+        result: {item: 'minecraft:fishing_rod'}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [{item: 'minecraft:iron_ingot'}, {item: 'minecraft:flint'}],
+        result: {item: 'minecraft:flint_and_steel'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# #', ' # '],
+        key: {'#': {item: 'minecraft:brick'}},
+        result: {item: 'minecraft:flower_pot'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '# #', '###'],
+        key: {'#': {item: 'minecraft:cobblestone'}},
+        result: {item: 'minecraft:furnace'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['A', 'B'],
+        key: {
+            A: {item: 'minecraft:furnace'},
+            B: {item: 'minecraft:minecart'}
+        },
+        result: {item: 'minecraft:furnace_minecart'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# #', ' # '],
+        key: {'#': {item: 'minecraft:glass'}},
+        result: {item: 'minecraft:glass_bottle', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:glass'}},
+        result: {item: 'minecraft:glass_pane', count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:glowstone_dust'}},
+        result: {item: 'minecraft:glowstone'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:gold_ingot'},
+            X: {item: 'minecraft:apple'}
+        },
+        result: {item: 'minecraft:golden_apple', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', 'X#', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:gold_ingot'}
+        },
+        result: {item: 'minecraft:golden_axe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'X X'],
+        key: {X: {item: 'minecraft:gold_ingot'}},
+        result: {item: 'minecraft:golden_boots'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:gold_nugget'},
+            X: {item: 'minecraft:carrot'}
+        },
+        result: {item: 'minecraft:golden_carrot'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'XXX', 'XXX'],
+        key: {X: {item: 'minecraft:gold_ingot'}},
+        result: {item: 'minecraft:golden_chestplate'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X'],
+        key: {X: {item: 'minecraft:gold_ingot'}},
+        result: {item: 'minecraft:golden_helmet'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', ' #', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:gold_ingot'}
+        },
+        result: {item: 'minecraft:golden_hoe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X', 'X X'],
+        key: {X: {item: 'minecraft:gold_ingot'}},
+        result: {item: 'minecraft:golden_leggings'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', ' # ', ' # '],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:gold_ingot'}
+        },
+        result: {item: 'minecraft:golden_pickaxe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'X#X', 'XRX'],
+        key: {
+            R: {item: 'minecraft:redstone'},
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:gold_ingot'}
+        },
+        result: {item: 'minecraft:golden_rail', count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:gold_ingot'}
+        },
+        result: {item: 'minecraft:golden_shovel'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', 'X', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:gold_ingot'}
+        },
+        result: {item: 'minecraft:golden_sword'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:gold_ingot'}},
+        result: {item: 'minecraft:gold_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'gold_ingot',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:gold_block'}},
+        result: {item: 'minecraft:gold_ingot', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'gold_ingot',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:gold_nugget'}},
+        result: {item: 'minecraft:gold_ingot'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:gold_ingot'}},
+        result: {item: 'minecraft:gold_nugget', count: 9}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:stone', data: 3},
+            {item: 'minecraft:quartz'}
+        ],
+        result: {item: 'minecraft:stone', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 7},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 7},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 7}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 8}
+        ],
+        result: {item: 'minecraft:bed', data: 7}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 7}},
+        result: {item: 'minecraft:carpet', data: 7, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 8},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 7, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:dye', data: 0},
+            {item: 'minecraft:dye', data: 15}
+        ],
+        result: {item: 'minecraft:dye', data: 8, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 8}
+        },
+        result: {item: 'minecraft:stained_glass', data: 7, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 7}},
+        result: {item: 'minecraft:stained_glass_pane', data: 7, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 8}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 7, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 8},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 7}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 13},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 13},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 13}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 2}
+        ],
+        result: {item: 'minecraft:bed', data: 13}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 13}},
+        result: {item: 'minecraft:carpet', data: 13, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 2},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 13, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 2}
+        },
+        result: {item: 'minecraft:stained_glass', data: 13, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 13}},
+        result: {item: 'minecraft:stained_glass_pane', data: 13, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 2}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 13, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 2},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 13}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:wheat'}},
+        result: {item: 'minecraft:hay_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:heavy_weighted_pressure_plate'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['I I', 'ICI', ' I '],
+        key: {
+            C: {item: 'minecraft:chest'},
+            I: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:hopper'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['A', 'B'],
+        key: {
+            A: {item: 'minecraft:hopper'},
+            B: {item: 'minecraft:minecart'}
+        },
+        result: {item: 'minecraft:hopper_minecart'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', 'X#', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:iron_axe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_bars', count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'X X'],
+        key: {X: {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_boots'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'XXX', 'XXX'],
+        key: {X: {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_chestplate'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##', '##'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_door', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X'],
+        key: {X: {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_helmet'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', ' #', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:iron_hoe'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'iron_ingot',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:iron_block'}},
+        result: {item: 'minecraft:iron_ingot', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'iron_ingot',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:iron_nugget'}},
+        result: {item: 'minecraft:iron_ingot'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X', 'X X'],
+        key: {X: {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_leggings'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_nugget', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', ' # ', ' # '],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:iron_pickaxe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:iron_shovel'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', 'X', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:iron_sword'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:iron_trapdoor'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:leather'}
+        },
+        result: {item: 'minecraft:item_frame'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ],
+            X: {item: 'minecraft:diamond'}
+        },
+        result: {item: 'minecraft:jukebox'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'boat',
+        pattern: ['# #', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 3}},
+        result: {item: 'minecraft:jungle_boat'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_door',
+        pattern: ['##', '##', '##'],
+        key: {'#': {item: 'minecraft:planks', data: 3}},
+        result: {item: 'minecraft:jungle_door', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence',
+        pattern: ['W#W', 'W#W'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 3}
+        },
+        result: {item: 'minecraft:jungle_fence', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence_gate',
+        pattern: ['#W#', '#W#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 3}
+        },
+        result: {item: 'minecraft:jungle_fence_gate'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'planks',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:log', data: 3}},
+        result: {item: 'minecraft:planks', data: 3, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_stairs',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 3}},
+        result: {item: 'minecraft:jungle_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_slab',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:planks', data: 3}},
+        result: {item: 'minecraft:wooden_slab', data: 3, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# #', '###', '# #'],
+        key: {'#': {item: 'minecraft:stick'}},
+        result: {item: 'minecraft:ladder', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:dye', data: 4}},
+        result: {item: 'minecraft:lapis_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:lapis_block'}},
+        result: {item: 'minecraft:dye', data: 4, count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['~~ ', '~O ', '  ~'],
+        key: {
+            '~': {item: 'minecraft:string'},
+            O: {item: 'minecraft:slime_ball'}
+        },
+        result: {item: 'minecraft:lead', count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:rabbit_hide'}},
+        result: {item: 'minecraft:leather'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'X X'],
+        key: {X: {item: 'minecraft:leather'}},
+        result: {item: 'minecraft:leather_boots'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'XXX', 'XXX'],
+        key: {X: {item: 'minecraft:leather'}},
+        result: {item: 'minecraft:leather_chestplate'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X'],
+        key: {X: {item: 'minecraft:leather'}},
+        result: {item: 'minecraft:leather_helmet'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', 'X X', 'X X'],
+        key: {X: {item: 'minecraft:leather'}},
+        result: {item: 'minecraft:leather_leggings'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#'],
+        key: {
+            '#': {item: 'minecraft:cobblestone'},
+            X: {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:lever'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 3},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 12}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 3},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 12}
+        ],
+        result: {item: 'minecraft:bed', data: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 3}},
+        result: {item: 'minecraft:carpet', data: 3, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 12},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 3, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'light_blue_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 1}],
+        result: {item: 'minecraft:dye', data: 12}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'light_blue_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 4},
+            {item: 'minecraft:dye', data: 15}
+        ],
+        result: {item: 'minecraft:dye', data: 12, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 12}
+        },
+        result: {item: 'minecraft:stained_glass', data: 3, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 3}},
+        result: {item: 'minecraft:stained_glass_pane', data: 3, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 12}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 3, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 12},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 8},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 7}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 8},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 7}
+        ],
+        result: {item: 'minecraft:bed', data: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 8}},
+        result: {item: 'minecraft:carpet', data: 8, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 7},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 8, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'light_gray_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 3}],
+        result: {item: 'minecraft:dye', data: 7}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'light_gray_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 8},
+            {item: 'minecraft:dye', data: 15}
+        ],
+        result: {item: 'minecraft:dye', data: 7, count: 2}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'light_gray_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 0},
+            {item: 'minecraft:dye', data: 15},
+            {item: 'minecraft:dye', data: 15}
+        ],
+        result: {item: 'minecraft:dye', data: 7, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'light_gray_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 8}],
+        result: {item: 'minecraft:dye', data: 7}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'light_gray_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 6}],
+        result: {item: 'minecraft:dye', data: 7}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 7}
+        },
+        result: {item: 'minecraft:stained_glass', data: 8, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 8}},
+        result: {item: 'minecraft:stained_glass_pane', data: 8, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 7}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 8, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 7},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:gold_ingot'}},
+        result: {item: 'minecraft:light_weighted_pressure_plate'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 5},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 10}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 5},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 5}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 10}
+        ],
+        result: {item: 'minecraft:bed', data: 5}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 5}},
+        result: {item: 'minecraft:carpet', data: 5, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 10},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 5, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:dye', data: 2},
+            {item: 'minecraft:dye', data: 15}
+        ],
+        result: {item: 'minecraft:dye', data: 10, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 10}
+        },
+        result: {item: 'minecraft:stained_glass', data: 5, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 5}},
+        result: {item: 'minecraft:stained_glass_pane', data: 5, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 10}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 5, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 10},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 5}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['A', 'B'],
+        key: {A: {item: 'minecraft:pumpkin'}, B: {item: 'minecraft:torch'}},
+        result: {item: 'minecraft:lit_pumpkin'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 2},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 13}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 2},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 2}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 13}
+        ],
+        result: {item: 'minecraft:bed', data: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 2}},
+        result: {item: 'minecraft:carpet', data: 2, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 13},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 2, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'magenta_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 2}],
+        result: {item: 'minecraft:dye', data: 13}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'magenta_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 4},
+            {item: 'minecraft:dye', data: 1},
+            {item: 'minecraft:dye', data: 1},
+            {item: 'minecraft:dye', data: 15}
+        ],
+        result: {item: 'minecraft:dye', data: 13, count: 4}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'magenta_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 4},
+            {item: 'minecraft:dye', data: 1},
+            {item: 'minecraft:dye', data: 9}
+        ],
+        result: {item: 'minecraft:dye', data: 13, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'magenta_dye',
+        ingredients: [{item: 'minecraft:double_plant', data: 1}],
+        result: {item: 'minecraft:dye', data: 13, count: 2}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'magenta_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 5},
+            {item: 'minecraft:dye', data: 9}
+        ],
+        result: {item: 'minecraft:dye', data: 13, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 13}
+        },
+        result: {item: 'minecraft:stained_glass', data: 2, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 2}},
+        result: {item: 'minecraft:stained_glass_pane', data: 2, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 13}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 2, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 13},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:magma_cream'}},
+        result: {item: 'minecraft:magma'}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:blaze_powder'},
+            {item: 'minecraft:slime_ball'}
+        ],
+        result: {item: 'minecraft:magma_cream'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:paper'},
+            X: {item: 'minecraft:compass'}
+        },
+        result: {item: 'minecraft:map'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['MMM', 'MMM', 'MMM'],
+        key: {M: {item: 'minecraft:melon'}},
+        result: {item: 'minecraft:melon_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['M'],
+        key: {M: {item: 'minecraft:melon'}},
+        result: {item: 'minecraft:melon_seeds'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['# #', '###'],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:minecart'}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [{item: 'minecraft:cobblestone'}, {item: 'minecraft:vine'}],
+        result: {item: 'minecraft:mossy_cobblestone'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:mossy_cobblestone'}},
+        result: {item: 'minecraft:cobblestone_wall', data: 1, count: 6}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:stonebrick', data: 0},
+            {item: 'minecraft:vine'}
+        ],
+        result: {item: 'minecraft:stonebrick', data: 1}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:brown_mushroom'},
+            {item: 'minecraft:red_mushroom'},
+            {item: 'minecraft:bowl'}
+        ],
+        result: {item: 'minecraft:mushroom_stew'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['NN', 'NN'],
+        key: {N: {item: 'minecraft:netherbrick'}},
+        result: {item: 'minecraft:nether_brick'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:nether_brick'}},
+        result: {item: 'minecraft:nether_brick_fence', count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:nether_brick'}},
+        result: {item: 'minecraft:stone_slab', data: 6, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:nether_brick'}},
+        result: {item: 'minecraft:nether_brick_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:nether_wart'}},
+        result: {item: 'minecraft:nether_wart_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ],
+            X: {item: 'minecraft:redstone'}
+        },
+        result: {item: 'minecraft:noteblock'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'planks',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:log', data: 0}},
+        result: {item: 'minecraft:planks', data: 0, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_stairs',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 0}},
+        result: {item: 'minecraft:oak_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_slab',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:planks', data: 0}},
+        result: {item: 'minecraft:wooden_slab', data: 0, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', 'RRQ', '###'],
+        key: {
+            Q: {item: 'minecraft:quartz'},
+            R: {item: 'minecraft:redstone'},
+            '#': {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:observer'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 1},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 14}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 1},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 1}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 14}
+        ],
+        result: {item: 'minecraft:bed', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 1}},
+        result: {item: 'minecraft:carpet', data: 1, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 14},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 1, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'orange_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 5}],
+        result: {item: 'minecraft:dye', data: 14}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'orange_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 1},
+            {item: 'minecraft:dye', data: 11}
+        ],
+        result: {item: 'minecraft:dye', data: 14, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 14}
+        },
+        result: {item: 'minecraft:stained_glass', data: 1, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 1}},
+        result: {item: 'minecraft:stained_glass_pane', data: 1, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 14}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 1, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 14},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: [
+                {item: 'minecraft:wool', data: 0},
+                {item: 'minecraft:wool', data: 1},
+                {item: 'minecraft:wool', data: 2},
+                {item: 'minecraft:wool', data: 3},
+                {item: 'minecraft:wool', data: 4},
+                {item: 'minecraft:wool', data: 5},
+                {item: 'minecraft:wool', data: 6},
+                {item: 'minecraft:wool', data: 7},
+                {item: 'minecraft:wool', data: 8},
+                {item: 'minecraft:wool', data: 9},
+                {item: 'minecraft:wool', data: 10},
+                {item: 'minecraft:wool', data: 11},
+                {item: 'minecraft:wool', data: 12},
+                {item: 'minecraft:wool', data: 13},
+                {item: 'minecraft:wool', data: 14},
+                {item: 'minecraft:wool', data: 15}
+            ]
+        },
+        result: {item: 'minecraft:painting'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:reeds'}},
+        result: {item: 'minecraft:paper', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#', '#'],
+        key: {'#': {item: 'minecraft:quartz_block', data: 0}},
+        result: {item: 'minecraft:quartz_block', data: 2, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 6},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 6},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 6}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 9}
+        ],
+        result: {item: 'minecraft:bed', data: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 6}},
+        result: {item: 'minecraft:carpet', data: 6, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 9},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 6, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'pink_dye',
+        ingredients: [{item: 'minecraft:double_plant', data: 5}],
+        result: {item: 'minecraft:dye', data: 9, count: 2}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'pink_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 7}],
+        result: {item: 'minecraft:dye', data: 9}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'pink_dye',
+        ingredients: [
+            {item: 'minecraft:dye', data: 1},
+            {item: 'minecraft:dye', data: 15}
+        ],
+        result: {item: 'minecraft:dye', data: 9, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 9}
+        },
+        result: {item: 'minecraft:stained_glass', data: 6, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 6}},
+        result: {item: 'minecraft:stained_glass_pane', data: 6, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 9}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 6, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 9},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['TTT', '#X#', '#R#'],
+        key: {
+            R: {item: 'minecraft:redstone'},
+            '#': {item: 'minecraft:cobblestone'},
+            T: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ],
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:piston'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['SS', 'SS'],
+        key: {S: {item: 'minecraft:stone', data: 5}},
+        result: {item: 'minecraft:stone', data: 6, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['SS', 'SS'],
+        key: {S: {item: 'minecraft:stone', data: 3}},
+        result: {item: 'minecraft:stone', data: 4, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['SS', 'SS'],
+        key: {S: {item: 'minecraft:stone', data: 1}},
+        result: {item: 'minecraft:stone', data: 2, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['SS', 'SS'],
+        key: {S: {item: 'minecraft:prismarine_shard'}},
+        result: {item: 'minecraft:prismarine', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['SSS', 'SSS', 'SSS'],
+        key: {S: {item: 'minecraft:prismarine_shard'}},
+        result: {item: 'minecraft:prismarine', data: 1}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:pumpkin'},
+            {item: 'minecraft:sugar'},
+            {item: 'minecraft:egg'}
+        ],
+        result: {item: 'minecraft:pumpkin_pie'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['M'],
+        key: {M: {item: 'minecraft:pumpkin'}},
+        result: {item: 'minecraft:pumpkin_seeds', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 10},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 5}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 10},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 10}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 5}
+        ],
+        result: {item: 'minecraft:bed', data: 10}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 10}},
+        result: {item: 'minecraft:carpet', data: 10, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 5},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 10, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:dye', data: 4},
+            {item: 'minecraft:dye', data: 1}
+        ],
+        result: {item: 'minecraft:dye', data: 5, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['-', '#', '-'],
+        key: {
+            '#': {item: 'minecraft:chest'},
+            '-': {item: 'minecraft:shulker_shell'}
+        },
+        result: {item: 'minecraft:purple_shulker_box'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 5}
+        },
+        result: {item: 'minecraft:stained_glass', data: 10, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 10}},
+        result: {item: 'minecraft:stained_glass_pane', data: 10, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 5}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 10, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 5},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 10}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['FF', 'FF'],
+        key: {F: {item: 'minecraft:chorus_fruit_popped'}},
+        result: {item: 'minecraft:purpur_block', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#', '#'],
+        key: {'#': {item: 'minecraft:purpur_slab', data: 0}},
+        result: {item: 'minecraft:purpur_pillar'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:purpur_block'}},
+        result: {item: 'minecraft:purpur_slab', data: 0, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:purpur_block'}},
+        result: {item: 'minecraft:purpur_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:quartz'}},
+        result: {item: 'minecraft:quartz_block', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {
+            '#': [
+                {item: 'minecraft:quartz_block', data: 0},
+                {item: 'minecraft:quartz_block', data: 1},
+                {item: 'minecraft:quartz_block', data: 2}
+            ]
+        },
+        result: {item: 'minecraft:stone_slab', data: 7, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:quartz_block', data: 0},
+                {item: 'minecraft:quartz_block', data: 1},
+                {item: 'minecraft:quartz_block', data: 2}
+            ]
+        },
+        result: {item: 'minecraft:quartz_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'rabbit_stew',
+        pattern: [' R ', 'CPM', ' B '],
+        key: {
+            P: {item: 'minecraft:baked_potato'},
+            R: {item: 'minecraft:cooked_rabbit'},
+            B: {item: 'minecraft:bowl'},
+            C: {item: 'minecraft:carrot'},
+            M: {item: 'minecraft:brown_mushroom'}
+        },
+        result: {item: 'minecraft:rabbit_stew'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'rabbit_stew',
+        pattern: [' R ', 'CPD', ' B '],
+        key: {
+            P: {item: 'minecraft:baked_potato'},
+            R: {item: 'minecraft:cooked_rabbit'},
+            B: {item: 'minecraft:bowl'},
+            C: {item: 'minecraft:carrot'},
+            D: {item: 'minecraft:red_mushroom'}
+        },
+        result: {item: 'minecraft:rabbit_stew'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X X', 'X#X', 'X X'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:rail', count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:redstone_block'}},
+        result: {item: 'minecraft:redstone', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:redstone'}},
+        result: {item: 'minecraft:redstone_block'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' R ', 'RGR', ' R '],
+        key: {
+            R: {item: 'minecraft:redstone'},
+            G: {item: 'minecraft:glowstone'}
+        },
+        result: {item: 'minecraft:redstone_lamp'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:redstone'}
+        },
+        result: {item: 'minecraft:redstone_torch'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 14},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 14},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 14}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 1}
+        ],
+        result: {item: 'minecraft:bed', data: 14}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 14}},
+        result: {item: 'minecraft:carpet', data: 14, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 1},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 14, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'red_dye',
+        ingredients: [{item: 'minecraft:beetroot'}],
+        result: {item: 'minecraft:dye', data: 1}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'red_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 0}],
+        result: {item: 'minecraft:dye', data: 1}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'red_dye',
+        ingredients: [{item: 'minecraft:double_plant', data: 4}],
+        result: {item: 'minecraft:dye', data: 1, count: 2}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'red_dye',
+        ingredients: [{item: 'minecraft:red_flower', data: 4}],
+        result: {item: 'minecraft:dye', data: 1}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['NW', 'WN'],
+        key: {
+            W: {item: 'minecraft:nether_wart'},
+            N: {item: 'minecraft:netherbrick'}
+        },
+        result: {item: 'minecraft:red_nether_brick'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:sand', data: 1}},
+        result: {item: 'minecraft:red_sandstone', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {
+            '#': [
+                {item: 'minecraft:red_sandstone', data: 0},
+                {item: 'minecraft:red_sandstone', data: 1},
+                {item: 'minecraft:red_sandstone', data: 2}
+            ]
+        },
+        result: {item: 'minecraft:stone_slab2', data: 0, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:red_sandstone', data: 0},
+                {item: 'minecraft:red_sandstone', data: 1},
+                {item: 'minecraft:red_sandstone', data: 2}
+            ]
+        },
+        result: {item: 'minecraft:red_sandstone_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 1}
+        },
+        result: {item: 'minecraft:stained_glass', data: 14, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 14}},
+        result: {item: 'minecraft:stained_glass_pane', data: 14, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 1}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 14, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 1},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 14}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#X#', 'III'],
+        key: {
+            '#': {item: 'minecraft:redstone_torch'},
+            X: {item: 'minecraft:redstone'},
+            I: {item: 'minecraft:stone', data: 0}
+        },
+        result: {item: 'minecraft:repeater'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:sand', data: 0}},
+        result: {item: 'minecraft:sandstone', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {
+            '#': [
+                {item: 'minecraft:sandstone', data: 0},
+                {item: 'minecraft:sandstone', data: 1},
+                {item: 'minecraft:sandstone', data: 2}
+            ]
+        },
+        result: {item: 'minecraft:stone_slab', data: 1, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:sandstone', data: 0},
+                {item: 'minecraft:sandstone', data: 1},
+                {item: 'minecraft:sandstone', data: 2}
+            ]
+        },
+        result: {item: 'minecraft:sandstone_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['SCS', 'CCC', 'SCS'],
+        key: {
+            S: {item: 'minecraft:prismarine_shard'},
+            C: {item: 'minecraft:prismarine_crystals'}
+        },
+        result: {item: 'minecraft:sea_lantern'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' #', '# '],
+        key: {'#': {item: 'minecraft:iron_ingot'}},
+        result: {item: 'minecraft:shears'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['WoW', 'WWW', ' W '],
+        key: {
+            W: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ],
+            o: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:shield'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', ' X '],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ],
+            X: {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:sign', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###', '###'],
+        key: {'#': {item: 'minecraft:slime_ball'}},
+        result: {item: 'minecraft:slime'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:slime'}},
+        result: {item: 'minecraft:slime_ball', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:red_sandstone', data: 0}},
+        result: {item: 'minecraft:red_sandstone', data: 2, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:sandstone', data: 0}},
+        result: {item: 'minecraft:sandstone', data: 2, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:snowball'}},
+        result: {item: 'minecraft:snow'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:snow'}},
+        result: {item: 'minecraft:snow_layer', count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:gold_nugget'},
+            X: {item: 'minecraft:melon'}
+        },
+        result: {item: 'minecraft:speckled_melon'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: [' # ', '#X#', ' # '],
+        key: {
+            '#': {item: 'minecraft:glowstone_dust'},
+            X: {item: 'minecraft:arrow'}
+        },
+        result: {item: 'minecraft:spectral_arrow', count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'boat',
+        pattern: ['# #', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 1}},
+        result: {item: 'minecraft:spruce_boat'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_door',
+        pattern: ['##', '##', '##'],
+        key: {'#': {item: 'minecraft:planks', data: 1}},
+        result: {item: 'minecraft:spruce_door', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence',
+        pattern: ['W#W', 'W#W'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 1}
+        },
+        result: {item: 'minecraft:spruce_fence', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_fence_gate',
+        pattern: ['#W#', '#W#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            W: {item: 'minecraft:planks', data: 1}
+        },
+        result: {item: 'minecraft:spruce_fence_gate'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'planks',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:log', data: 1}},
+        result: {item: 'minecraft:planks', data: 1, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_stairs',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:planks', data: 1}},
+        result: {item: 'minecraft:spruce_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_slab',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:planks', data: 1}},
+        result: {item: 'minecraft:wooden_slab', data: 1, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#', '#'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:stick', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['S', 'P'],
+        key: {
+            P: {item: 'minecraft:piston'},
+            S: {item: 'minecraft:slime_ball'}
+        },
+        result: {item: 'minecraft:sticky_piston'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:stone', data: 0}},
+        result: {item: 'minecraft:stonebrick', data: 0, count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', 'X#', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:stone_axe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {
+            '#': [
+                {item: 'minecraft:stonebrick', data: 0},
+                {item: 'minecraft:stonebrick', data: 1},
+                {item: 'minecraft:stonebrick', data: 2},
+                {item: 'minecraft:stonebrick', data: 3}
+            ]
+        },
+        result: {item: 'minecraft:stone_slab', data: 5, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:stonebrick', data: 0},
+                {item: 'minecraft:stonebrick', data: 1},
+                {item: 'minecraft:stonebrick', data: 2},
+                {item: 'minecraft:stonebrick', data: 3}
+            ]
+        },
+        result: {item: 'minecraft:stone_brick_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:stone', data: 0}},
+        result: {item: 'minecraft:stone_button'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', ' #', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:stone_hoe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', ' # ', ' # '],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:stone_pickaxe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:stone', data: 0}},
+        result: {item: 'minecraft:stone_pressure_plate'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:stone_shovel'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###'],
+        key: {'#': {item: 'minecraft:stone', data: 0}},
+        result: {item: 'minecraft:stone_slab', data: 0, count: 6}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#  ', '## ', '###'],
+        key: {'#': {item: 'minecraft:cobblestone'}},
+        result: {item: 'minecraft:stone_stairs', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', 'X', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: {item: 'minecraft:cobblestone'}
+        },
+        result: {item: 'minecraft:stone_sword'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##', '##'],
+        key: {'#': {item: 'minecraft:string'}},
+        result: {item: 'minecraft:wool', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:reeds'}},
+        result: {item: 'minecraft:sugar'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X#X', '#X#', 'X#X'],
+        key: {
+            '#': [
+                {item: 'minecraft:sand', data: 0},
+                {item: 'minecraft:sand', data: 1}
+            ],
+            X: {item: 'minecraft:gunpowder'}
+        },
+        result: {item: 'minecraft:tnt'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['A', 'B'],
+        key: {A: {item: 'minecraft:tnt'}, B: {item: 'minecraft:minecart'}},
+        result: {item: 'minecraft:tnt_minecart'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: [
+                {item: 'minecraft:coal', data: 0},
+                {item: 'minecraft:coal', data: 1}
+            ]
+        },
+        result: {item: 'minecraft:torch', count: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['###', '###'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:trapdoor', count: 2}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [{item: 'minecraft:chest'}, {item: 'minecraft:tripwire_hook'}],
+        result: {item: 'minecraft:trapped_chest'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['I', 'S', '#'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ],
+            S: {item: 'minecraft:stick'},
+            I: {item: 'minecraft:iron_ingot'}
+        },
+        result: {item: 'minecraft:tripwire_hook', count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {'#': {item: 'minecraft:hay_block'}},
+        result: {item: 'minecraft:wheat', count: 9}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 0},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 15}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 0},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 0}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 0}},
+        result: {item: 'minecraft:carpet', data: 0, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 15},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 0, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 15}
+        },
+        result: {item: 'minecraft:stained_glass', data: 0, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 0}},
+        result: {item: 'minecraft:stained_glass_pane', data: 0, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 15}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 0, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', 'X#', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:wooden_axe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['#'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:wooden_button'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'wooden_door',
+        pattern: ['##', '##', '##'],
+        key: {'#': {item: 'minecraft:planks', data: 0}},
+        result: {item: 'minecraft:wooden_door', count: 3}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XX', ' #', ' #'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:wooden_hoe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['XXX', ' # ', ' # '],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:wooden_pickaxe'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['##'],
+        key: {
+            '#': [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:wooden_pressure_plate'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', '#', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:wooden_shovel'}
+    },
+    {
+        type: 'crafting_shaped',
+        pattern: ['X', 'X', '#'],
+        key: {
+            '#': {item: 'minecraft:stick'},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:wooden_sword'}
+    },
+    {
+        type: 'crafting_shapeless',
+        ingredients: [
+            {item: 'minecraft:book'},
+            {item: 'minecraft:dye', data: 0},
+            {item: 'minecraft:feather'}
+        ],
+        result: {item: 'minecraft:writable_book'}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'banner',
+        pattern: ['###', '###', ' | '],
+        key: {
+            '#': {item: 'minecraft:wool', data: 4},
+            '|': {item: 'minecraft:stick'}
+        },
+        result: {item: 'minecraft:banner', data: 11}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'bed',
+        pattern: ['###', 'XXX'],
+        key: {
+            '#': {item: 'minecraft:wool', data: 4},
+            X: [
+                {item: 'minecraft:planks', data: 0},
+                {item: 'minecraft:planks', data: 1},
+                {item: 'minecraft:planks', data: 2},
+                {item: 'minecraft:planks', data: 3},
+                {item: 'minecraft:planks', data: 4},
+                {item: 'minecraft:planks', data: 5}
+            ]
+        },
+        result: {item: 'minecraft:bed', data: 4}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'dyed_bed',
+        ingredients: [
+            {item: 'minecraft:bed', data: 0},
+            {item: 'minecraft:dye', data: 11}
+        ],
+        result: {item: 'minecraft:bed', data: 4}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'carpet',
+        pattern: ['##'],
+        key: {'#': {item: 'minecraft:wool', data: 4}},
+        result: {item: 'minecraft:carpet', data: 4, count: 3}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'concrete_powder',
+        ingredients: [
+            {item: 'minecraft:dye', data: 11},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:sand', data: 0},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'},
+            {item: 'minecraft:gravel'}
+        ],
+        result: {item: 'minecraft:concrete_powder', data: 4, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'yellow_dye',
+        ingredients: [{item: 'minecraft:yellow_flower', data: 0}],
+        result: {item: 'minecraft:dye', data: 11}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'yellow_dye',
+        ingredients: [{item: 'minecraft:double_plant', data: 0}],
+        result: {item: 'minecraft:dye', data: 11, count: 2}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:glass'},
+            X: {item: 'minecraft:dye', data: 11}
+        },
+        result: {item: 'minecraft:stained_glass', data: 4, count: 8}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_glass_pane',
+        pattern: ['###', '###'],
+        key: {'#': {item: 'minecraft:stained_glass', data: 4}},
+        result: {item: 'minecraft:stained_glass_pane', data: 4, count: 16}
+    },
+    {
+        type: 'crafting_shaped',
+        group: 'stained_hardened_clay',
+        pattern: ['###', '#X#', '###'],
+        key: {
+            '#': {item: 'minecraft:hardened_clay'},
+            X: {item: 'minecraft:dye', data: 11}
+        },
+        result: {item: 'minecraft:stained_hardened_clay', data: 4, count: 8}
+    },
+    {
+        type: 'crafting_shapeless',
+        group: 'wool',
+        ingredients: [
+            {item: 'minecraft:dye', data: 11},
+            {item: 'minecraft:wool', data: 0}
+        ],
+        result: {item: 'minecraft:wool', data: 4}
+    },
+
 ];
 
 

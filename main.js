@@ -21,7 +21,7 @@ function isImageExists(imageUrl){
     }
 
 }
-const itemsTexturesPath = './textures/items/'
+const itemsTexturesPath = './minecraft_data/textures/items/'
 let heldItem = null;
 document.addEventListener('mousemove', (e) => {
     const [x,y] = [e.clientX, e.clientY]
@@ -55,8 +55,9 @@ const setHeldItem = (item) => {
     if (heldItem){
         const itemImg = document.createElement("img");
         itemImg.style.height = '100px';
+        itemImg.style.imageRendering = 'pixelated';
 
-        const pathToImg = itemsTexturesPath + `${heldItem}.png`
+        const pathToImg = itemsTexturesPath + `${heldItem.replace('minecraft:', '')}.png`
         if (isImageExists(pathToImg))   itemImg.src = pathToImg
         else {
             itemImg.src = itemsTexturesPath + `/not_found.png`
@@ -132,8 +133,9 @@ class Slot{
         if (this.item) {
             const itemImg = document.createElement("img");
             itemImg.classList.add("itemImg");
+            itemImg.style.imageRendering = 'pixelated';
 
-            const pathToImg = itemsTexturesPath + `${this.item}.png`
+            const pathToImg = itemsTexturesPath + `${this.item.replace('minecraft:', '')}.png`
 
             if (isImageExists(pathToImg))   itemImg.src = pathToImg
             else {

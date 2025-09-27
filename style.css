@@ -66,7 +66,7 @@ p{
     min-width: 100px;
     min-height: 100px;
     background-color: #8a8a8a;
-    border: solid 5px;
+    border: solid 6px;
     border-color: #3f3f3f #f1f1f1 #f1f1f1 #3f3f3f;
     cursor: pointer;
 
@@ -74,6 +74,8 @@ p{
     justify-content: center;
     flex-direction: column; /* Расположить элементы сверху вниз */
     align-items: center; /* Центровка по горизонтали */
+
+    /*filter: brightness(1) saturate(1) contrast(1);*/
 }
 .slot:hover{
     filter: brightness(1.4) saturate(0.8) contrast(0.8);
