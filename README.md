@@ -1,4 +1,4 @@
-# Simple web site with Minecraft crafting table (now in work) 
+# Simple web site with Minecraft crafting table (currently in development) 
 
 Get items from bottom "creative inventory" slots, and place in slots of a crafting grid, then if items are placed in exsisting craft pattern, you should get result item.
 
